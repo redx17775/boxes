@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    overflow: hidden;
 }
 /* header*/
 header h3{
@@ -52,8 +53,23 @@ nav #nav_row .col:hover{/*link animation when hover*/
     box-shadow: 0px 0px 50px #ffff !important;
 }
 
-/*===============================================================================================*/
 
+/*===============================================================================================*/
+/*footer*/
+
+#cont_footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
+    background-color: #0A0A0A;
+    text-align: center;
+    color: #ffff;
+}
+
+
+
+/*===============================================================================================*/
 /*main*/
 #cont_main{
     background-image:url(img/footer.png) ;
@@ -95,7 +111,14 @@ nav #nav_row .col:hover{/*link animation when hover*/
     margin: 25px;
 }
 
-#info_3 p,a{
+#info_3 p{
+    display: inline;
+    color: #ffff;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+#info_3 a{
     display: inline;
     color: #ffff;
     padding: 5px;

@@ -57,7 +57,21 @@ nav #nav_row .col:hover{/*link animation when hover*/
 }
 
 /*===============================================================================================*/
+/*footer*/
 
+#cont_footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
+    background-color: #0A0A0A;
+    text-align: center;
+    color: #ffff;
+}
+
+
+
+/*===============================================================================================*/
 /*main*/
 #cont_main{ /*background-image*/
     background-image:url(img/products.png) ;
