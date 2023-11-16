@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #0A0A0A !important;
+}
+/* header*/
+header h3{
+    color:#ffff ;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#logo_col{ /*logo margin so it can be at the beginning*/
+    margin: 0;
+    padding: 0;
+}
+#mineNav_col{ /*make the link white insted blue*/
+    color: #ffff;
+}
+#mineNav_col a:link{/*make the link white insted blue*/
+    color: #ffff;
+}
+#mineNav_col a:visited{/*make the link white insted blue when visdet*/
+    color: #ffff;
+}
+#mineNav_col .col:hover{/*link animation when hover*/
+    color: rgb(0, 0, 0);
+    background-color: #ffffffc4 !important;
+    box-shadow: 0px 0px 50px #ffff !important;
+}
+
+/*===============================================================================================*/
+
+/* nav */
+nav #nav_row .col{
+    text-align: center;
+    display: block;
+    padding: 8px;
+}
+
+nav #nav_row .col a{/*make the link white insted blue*/
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffff;
+}
+nav #nav_row .col:hover,a:hover{/*link animation when hover*/
+    color: #0A0A0A !important;
+}
+
+nav #nav_row .col:hover{/*link animation when hover*/
+    background-color: #ffffffc4 !important;
+    box-shadow: 0px 0px 50px #ffff !important;
+}
+
+/*===============================================================================================*/
+
+/*main*/
+#cont_main{
+    background-image:url(img/footer.png) ;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+#info_1{
+    text-align: center;
+    margin-top: 70px;
+    color: #ffff;
+    font-weight: bold;
+    
+}
+#info_1 h1{
+    font-weight: bold;
+}
+#info_2{
+    text-align: center;
+    margin-top: 70px;
+    color: #ffff;
+    font-weight: bold;
+}
+#info_2 h3{
+    display: inline;
+    line-height: 1.37;
+}
+#info_3{
+    text-align: center;
+    margin-top: 70px;
+    color: #ffff;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#info_3 .p{
+    width: 100%;
+    margin: 25px;
+}
+
+#info_3 p,a{
+    display: inline;
+    color: #ffff;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
