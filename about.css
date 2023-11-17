@@ -82,7 +82,7 @@ footer{
 /*===============================================================================================*/
 /*main*/
 body{
-    overflow: auto;
+    overflow: scroll;
 }
 #cont_main{
     background-image:url(img/footer.png) ;
