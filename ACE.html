@@ -8,7 +8,7 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="ACE.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,10 @@
 
     <style>
         body{background-color: #0A0A0A !important;}
+        table, th, td {
+            border: 3px solid transparent;
+            border-collapse: collapse;
+        }
     </style>
 
 </head>
@@ -48,7 +52,7 @@
     <nav>
         <div class="container-fluid border">
                 <div class="row align-items-center border" id="nav_row">
-                <div class="col border" style="background-color: #ffffff57;"><a href="index.html">Home</a></div>
+                <div class="col border"><a href="index.html">Home</a></div>
                 <div class="col border"><a href="products.html">Products</a></div>
                 <div class="col border"><a href="contact.html">Contact Us</a></div>
                 <div class="col border"><a href="about.html">About Us</a></div>
@@ -59,17 +63,49 @@
     <!--Main-->
     <main>
         
-        <div class="container-fluid" id="cont_main">
-            <div class="row" id="main_row">
-                <div class="col">
-                    <h1>ACE</h1>
-                    <h3>Distinguish with us your unique luxurious scent with a mixture of patchouli, leather and other component with stability for 48 hours</h3>
-                    <p class="card-text"><small class="text-muted"><a href="ACE.html">Learn more</a></small></p>
-                </div>
-            </div>
-            <div class="row" id="main_row">
-                <div class="col">
-                    
+        <div class="container-fluid" id="cont_main" style="padding: 0px;">
+            <div class="row" id="main_row" style="margin: 0;">
+                <div class="col" style="width: 100%;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td rowspan="3" >
+                                <img src="img/ACE.jpg" alt="ace" width="180px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><h1 style="text-align: center;">ACE</h1></th>
+                        </tr>
+                        <tr>
+                            <th><h5 style="text-align: center; padding: 15px;">It is a perfume that was manufactured in the Sultanate of Oman by Omani hands and contains aromatic ingredients that give its owner luxury and sophistication.</h5></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="3px solid #ffffff">
+                                    <tr>
+                                        <td>Patchouli</td>
+                                        <td>10%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vanilla</td>
+                                        <td>4%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Leather</td>
+                                        <td>10%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Essential oil</td>
+                                        <td>50%</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" type="button">Add to Cart</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* header*/
+header h3{
+    color:#ffff ;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+#logo_col{ /*logo margin so it can be at the beginning*/
+    margin: 0;
+    padding: 0;
+}
+#mineNav_col{ /*make the link white insted blue*/
+    color: #ffff;
+}
+#mineNav_col a:link{/*make the link white insted blue*/
+    color: #ffff;
+}
+#mineNav_col a:visited{/*make the link white insted blue when visdet*/
+    color: #ffff;
+}
+#mineNav_col .col:hover{/*link animation when hover*/
+    color: rgb(0, 0, 0);
+    background-color: #ffffffc4 !important;
+    box-shadow: 0px 0px 50px #ffff !important;
+}
+
+/*===============================================================================================*/
+
+/* nav */
+nav #nav_row .col{
+    text-align: center;
+    display: block;
+    padding: 8px;
+}
+
+nav #nav_row .col a{/*make the link white insted blue*/
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffff;
+}
+nav #nav_row .col:hover,a:hover{/*link animation when hover*/
+    color: #0A0A0A !important;
+}
+
+nav #nav_row .col:hover{/*link animation when hover*/
+    background-color: #ffffffc4 !important;
+    box-shadow: 0px 0px 50px #ffff !important;
+}
+
+/*===============================================================================================*/
+/*footer*/
+
+footer{
+    overflow: hidden;
+}
+#cont_footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4vh;
+    background-color: #0A0A0A;
+    text-align: center;
+    color: #ffff;
+}
+
+
+
+/*===============================================================================================*/
+
+/*main*/
+#cont_main{ /*background-image*/
+    background-image:url(img/main.jpeg) ;
+    background-size: cover;
+    background-position: left;
+    width: 100%;
+    height: 100vh;
+    color: #ffff;
+}
+main #cont_main #main_row{
+    width: 100%;
+    height: 100vh;
+}
