@@ -79,9 +79,8 @@ footer{
 
 /*===============================================================================================*/
 /*main*/
-main{
-    overflow-y: auto;
-    overflow-x: hidden;
+body{
+    overflow: auto;
 }
 #cont_main{
     background-image:url(img/footer.png) ;
@@ -116,6 +115,7 @@ main{
     color: #ffff;
     font-weight: bold;
     font-size: 1em;
+    display: inline;
 }
 
 #info_3 .p{
