@@ -1,7 +1,3 @@
-
-
-
-
 function ACE() {
     this.ACE = "ACE";
     this.price = 15.00;
@@ -17,23 +13,22 @@ function Shipping() {
 
 
 
-        const ace= new ACE()
-             let array1 = [
+const ace= new ACE()
+let array1 = [
     
-                 this.ACE ,
-                 this.price , 
-                 this.image ,
-    
-    
-                         ];
+    ace.ACE ,
+    ace.price , 
+    ace.image ,
+  
+];
 
-        const shiping= new Shipping()
-                let array2 = [
+const shiping= new Shipping()
+let array2 = [
       
-                this.urgent,
-                this.normal,
+    ace.urgent,
+    ace.normal,
     
-                             ];
+];
     
  
 
