@@ -12,7 +12,7 @@
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Questionnaire.css".css" />
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,44 +70,64 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-    </br>
-        <h1> Feedback Questionnaire</h1>
+                    <div class="row" style="margin-top: 15px;"><h1>Feedback Questionnaire</h1></div>
+                    <form id="feedbackForm">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="name">Name :</label>
+                                    <input type="text" id="name" name="name" placeholder="Enter Your First Name and Last Name" size="30" style="height: 30px;" required> 
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="col">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label>How was your experience?</label><br>
+                                        <div class="col"></div>
+                                        <div class="col-3">
+                                            <input type="radio" id="goodExp" name="experience" value="good">
+                                            <label for="goodExp">Good 😁 </label><br>
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="radio" id="avgExp" name="experience" value="average">
+                                            <label for="avgExp">Mid 🙃 </label><br>
+                                        </div>
+                                        <div class="col-3">
+                                            <input type="radio" id="badExp" name="experience" value="bad">
+                                            <label for="badExp">Bad 🫠 </label>
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="form-group">
+                                <label for="comments">Comments :</label><br>
+                            <div class="col" style="margin-top: 10px;">
+                                <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Enter Your Comments" required></textarea>
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col" style="margin-top: 30px;">
+                                <div class="form-group">
+                                    <input type="checkbox" id="Confirm" name="Confirm">
+                                    <label for="subscribe"> Confirm Feedback </label>
+                                </div>        
+                            </div>
+                        </div>
 
-    </br>
-        <form id="feedbackForm">
-          <div class="form-group">
-            <label for="name">Name :</label>
-            <input type="text" id="name" name="name" placeholder="Enter Your First Name and Last Name" size="30" style="height: 30px;" required> 
-          </div>
-    </br>      
-          <div class="form-group">
-            <label>How was your experience?</label><br>
-            <input type="radio" id="goodExp" name="experience" value="good">
-            <label for="goodExp">Good 😁 </label><br>
-            <input type="radio" id="avgExp" name="experience" value="average">
-            <label for="avgExp">Average 🙃 </label><br>
-            <input type="radio" id="badExp" name="experience" value="bad">
-            <label for="badExp">Bad 🫠 </label>
-          </div>
-    </br>
-          <div class="form-group">
-            <label for="comments">Comments :</label><br>
-    </br>        
-            <textarea id="comments" name="comments" rows="4" cols="30" placeholder="Enter Your Comments" required></textarea>
-          </div>
-    </br>      
-          <div class="form-group">
-            <input type="checkbox" id="Confirm" name="Confirm">
-            <label for="subscribe"> Confirm Feedback </label>
-          </div>
-          <label>
-    </br>        
-          <button type="submit">Submit</button>
-          <button type="reset">Clear</button></label>
-        </form>
-      
-  
-  
+                        <div class="row" style="margin-top: 30px;">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-primary">Clear</button></label>
+                            </div>
+                        </div>
+                    </form>
   
         <script src="Questionnaire .js"></script>
 </div>
