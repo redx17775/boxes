@@ -73,13 +73,14 @@ footer{
 /*===============================================================================================*/
 /*main*/
 body{
-    overflow-y: scroll;
+    overflow-y: auto !important;
     overflow-x: hidden;
+    height: 100vh;
 }
 main{
     color: white;
     font-weight: bold;
     font-size: 1.2em;
     width: 100%;
-    height: 110vh;
+    height: 120vh;
 }
