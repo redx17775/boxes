@@ -13,8 +13,8 @@
     <form id="cartForm" class="form-inline mb-3">
       <label for="item" class="mr-2">Select Item:</label>
       <select id="item" class="form-control mr-2">
-        <option value="item1">Item 1 - $10.00</option>
-        <option value="item2">Item 2 - $20.00</option>
+        <option value="item1">product 1 - OMR10.00</option>
+        <option value="item2">product 2 - OMR15.00</option>
         <!-- Add more items as needed -->
       </select>
   
@@ -53,7 +53,7 @@
       </tbody>
     </table>
   
-    <p id="total">Total: $0.00</p>
+    <p id="total">Total: OMR0.00</p>
 
     <script>
         let cart = [];
@@ -64,7 +64,7 @@
 
         const selectedItem = itemSelect.options[itemSelect.selectedIndex].text;
         const quantity = parseInt(quantityInput.value);
-        const price = parseFloat(selectedItem.match(/\$([\d.]+)/)[1]);
+        const price = parseFloat(selectedItem.match(/OMR([\d.]+)/)[1]);
         const total = quantity * price;
 
         cart.push({ item: selectedItem, quantity, total });
@@ -83,7 +83,7 @@
             const row = cartBody.insertRow();
             row.insertCell(0).textContent = item.item;
             row.insertCell(1).textContent = item.quantity;
-            row.insertCell(2).textContent = '$' + item.total.toFixed(2);
+            row.insertCell(2).textContent = 'OMR' + item.total.toFixed(2);
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Remove';
@@ -104,13 +104,13 @@
             const row = billBody.insertRow();
             row.insertCell(0).textContent = item.item;
             row.insertCell(1).textContent = item.quantity;
-            row.insertCell(2).textContent = '$' + item.total.toFixed(2);
+            row.insertCell(2).textContent = 'OMR' + item.total.toFixed(2);
 
             totalAmount += item.total;
         });
 
         const totalElement = document.getElementById('total');
-        totalElement.textContent = 'Total: $' + totalAmount.toFixed(2);
+        totalElement.textContent = 'Total: OMR' + totalAmount.toFixed(2);
         }
 
         function removeFromCart(itemToRemove) {
