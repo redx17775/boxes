@@ -1,10 +1,12 @@
 function ACE() {
+    //element for array 1
     this.ACE = "ACE";
     this.price = 15.00;
     this.image = "img/ACE.jpg";
 }
 
 function Shipping() {
+    //element for array 2 
      this.urgent = 10.00;
      this.normal = 5.00;
 }
@@ -14,6 +16,7 @@ function Shipping() {
 
 
 const ace= new ACE()
+//array 1
 let array1 = [ 
     ace.ACE ,
     ace.price , 
@@ -21,6 +24,7 @@ let array1 = [
 ];
 
 const shiping= new Shipping()
+//array 2
 let array2 = [ 
     shiping.urgent,
     shiping.normal,  
@@ -28,6 +32,8 @@ let array2 = [
     
 const ace_price = array1[1];
 let price = 0;
+
+//add to the cart
 function addCart() {
     document.getElementById("pic").src = array1[2];
     document.getElementById("pic").style.width = "150px";
