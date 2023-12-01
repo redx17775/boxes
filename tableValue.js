@@ -62,7 +62,7 @@ map.set("price","15 OMR");
 map.set("shipping","5 OMR");
 function search() {
     x = document.getElementById("search").value;
-    x.toLowerCase();
+    x = x.toLowerCase();
     window.alert(map.get(x));
     
 }

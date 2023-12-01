@@ -50,10 +50,8 @@
                 <div class="row align-items-center border" id="nav_row">
                 <div class="col border" style="background-color: #ffffff57;"><a href="index.html">Home</a></div>
                 <div class="col border"><a href="products.html">Products</a></div>
-                <div class="col border"><a href="fun.html">Fun</a></div>
                 <div class="col border"><a href="contact.html">Contact</a></div>
                 <div class="col border"><a href="about.html">About</a></div>
-                <div class="col border"><a href="Questionnaire.html">Questionnaire</a></div>
             </div>
         </div>
     </nav>
@@ -70,7 +68,31 @@
                 </div>
             </div>
             <div class="row" id="main_row">
-                <div class="col">
+                <div class="col" id="Gallery">
+                    <!-- Photo Gallery -->
+                    <div id="photoGallery" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                        <div class="carousel-item active" style="height: 40vh;width: 100%;">
+                            <img src="img/1.jpg" class="d-block w-50" alt="Photo 1" style="object-fit:cover">
+                        </div>
+                        <div class="carousel-item" style="height: 40vh;width: 100%;">
+                            <img src="img/2.jpg" class="d-block w-50" alt="Photo 2" style="object-fit:cover">
+                        </div>
+                        <div class="carousel-item" style="height: 40vh;width: 100%;">
+                            <img src="img/3.jpg" class="d-block w-50" alt="Photo 3" style="object-fit:cover">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="btn_row">
+                <div class="col" id="btn">
+                    <div class="btn_g">
+                        <button class="btn btn-primary" type="button" onclick="load_fun()">Fun</button>
+                        <button class="btn btn-primary" type="button" onclick="load_Questionnaire()">Questionnaire</button>
+                        <button class="btn btn-primary" type="button" onclick="load_calculation()">calculation</button>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -81,11 +103,34 @@
         <div class="container-fluid border" id="cont_footer">
             <div class="row" id="footer_row">
                 <div class="col">
+                    <div id="bottom-banner">
+                        <p>Welcome to the Boxes website! Today is <span id="currentDate"></span>.</p>
+                    </div>
                     <h3>&copy;01 programmers</h3>
                 </div>
             </div>
     </footer>
-    
+      <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--time functuion-->
+    <script>
+        const t = new Date();
+        document.getElementById("currentDate").innerHTML = t;
+    </script>
+
+     <!--JavaScript for the rotating carousel -->
+    <script>
+        $(document).ready(function(){
+        // Set the interval for carousel rotation (in milliseconds)
+        $('#photoGallery').carousel({
+            interval: 3000 // 3 seconds
+        });
+        });
+    </script>
+    <script src="home.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </body>
 </html>
