@@ -56,7 +56,13 @@ function add(){
     array3.push(new ACE());
 }
 
+var map = new Map();
+map.set("name","Ace");
+map.set("price","15 OMR");
+map.set("shipping","5 OMR");
 function search() {
-    let searchTerm = document.getElementById('searchInput').value;
+    x = document.getElementById("search").value;
+    x.toLowerCase();
+    window.alert(map.get(x));
     
 }
