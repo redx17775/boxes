@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* header*/
@@ -64,10 +63,15 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 4vh;
+    height: 10vh;
     background-color: #0A0A0A;
     text-align: center;
     color: #ffff;
+}
+#bottom-banner{
+    text-align: center;
+    color: #ffff;
+    font-size: 0.8em;
 }
 
 
@@ -82,10 +86,7 @@ footer{
     width: 100%;
     height: 100vh;
     color: #ffff;
-}
-main #cont_main #main_row{
-    width: 100%;
-    height: 100vh;
+    overflow-y: auto;
 }
 
 main #cont_main #main_row .col h1{
@@ -112,4 +113,18 @@ main #cont_main #main_row .col p{
     padding: 15px;
     text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
     0px -4px 10px rgba(56, 56, 56, 0.878);
+}
+#Gallery{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#btn{
+    padding: 25px;
+}
+#btn_row,#btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
