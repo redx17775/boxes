@@ -128,3 +128,20 @@ main #cont_main #main_row .col p{
     justify-content: center;
     width: 100%;
 }
+
+#bottom-banner {
+    width: 100%;
+    animation-name: slideLeft;
+    animation-duration: 15s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+  }
+
+@keyframes slideLeft {
+    from {
+     transform: translateX(700px);
+    }
+    to{
+        transform: translateX(-700px);
+    }
+}
