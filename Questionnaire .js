@@ -1,7 +1,3 @@
-
-
-
-
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     // Prevent the default form submission
     event.preventDefault();

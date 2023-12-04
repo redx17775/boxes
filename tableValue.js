@@ -11,10 +11,6 @@ function Shipping() {
      this.normal = 5.00;
 }
 
-
-
-
-
 const ace= new ACE()
 //array 1
 let array1 = [ 
