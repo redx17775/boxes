@@ -1,11 +1,11 @@
-let x_c;
-let y_c;
-let x_p;
+let x_c;//comp random number
+let y_c;//comp choice
+let x_p;//user choice
 let r = "Rock";
 let p = "Paper";
 let s = "Scissor";
 
-function comp(){
+function comp(){//function to get comp choice by random
     x_c = Math.floor(Math.random()*3) + 1;
     switch (x_c){
         case(1): y_c = "Rock";break;
@@ -14,7 +14,7 @@ function comp(){
     }
     return y_c;
 }
-
+//function if user Rock
 function playerC1(){
     const c = new comp();
     x_p = document.getElementById("btn1").innerHTML;
@@ -39,7 +39,7 @@ function playerC1(){
         }
     }
 }
-
+//function if user Paper
 function playerC2(){
     const c = new comp();
     x_p = document.getElementById("btn2").innerHTML;
@@ -64,6 +64,7 @@ function playerC2(){
         }
     }
 }
+//function if user Scissor
 function playerC3(){
     const c = new comp();
     x_p = document.getElementById("btn3").innerHTML;
@@ -89,7 +90,3 @@ function playerC3(){
     }
 }
 
-
-
-
-//const p = new player();
