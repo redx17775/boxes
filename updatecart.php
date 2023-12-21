@@ -8,71 +8,71 @@
 <body>
     <?php
 
-    class FormData
+    class CartItem
     {
         public $name;
-        public $email;
-        public $message;
+        public $description;
+        public $price;
 
-        public function __construct($name, $email, $message)
+        public function __construct($name, $description, $price)
         {
             $this->name = $name;
-            $this->email = $email;
-            $this->message = $message;
+            $this->description = $description;
+            $this->price = $price;
         }
     }
 
-    function displayFormData($formDataArray)
+    function displayCartItems($cartItems)
     {
-        echo '<table border="1">
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Message</th>
-                </tr>';
-
-        foreach ($formDataArray as $formData) {
-            echo '<tr>
-                    <td>' . $formData->name . '</td>
-                    <td>' . $formData->email . '</td>
-                    <td>' . $formData->message . '</td>
-                </tr>';
+        foreach ($cartItems as $cartItem) {
+            echo '<div class="row" style="margin-bottom: 3%;">
+                    <div class="col-md-3" style="margin-right: 30px;">
+                    <div class="img" style="width: 150px; height: 150px;">
+                        <img src="https://via.placeholder.com/150" alt="Product Image" id="pic" style="object-fit:cover;">
+                    </div>
+                    </div>
+                    <div class="col-md-6">
+                    <h4 id="name">' . $cartItem->name . '</h4>
+                    <p id="description">' . $cartItem->description . '</p>
+                    <p class="font-weight-bold" id="price">Price: ' . $cartItem->price . '</p>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart()">Remove</button>
+                    </div>
+                </div>';
         }
-
-        echo '</table>';
     }
 
-    // Check if the form is submitted
+    // Check if the cart data is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Get form data
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $message = $_POST["message"];
+        // Get cart data
+        $cartName = $_POST["name"];
+        $cartDescription = $_POST["description"];
+        $cartPrice = $_POST["price"];
 
-        // Create a new FormData object
-        $formData = new FormData($name, $email, $message);
+        // Create a new CartItem object
+        $cartItem = new CartItem($cartName, $cartDescription, $cartPrice);
 
-        // Define an array to store form data objects
-        $formDataArray = [];
+        // Define an array to store cart item objects
+        $cartItems = [];
 
         // Check if the array is already set in the session
-        if (isset($_SESSION["formDataArray"])) {
-            $formDataArray = $_SESSION["formDataArray"];
+        if (isset($_SESSION["cartItems"])) {
+            $cartItems = $_SESSION["cartItems"];
         }
 
-        // Add the new FormData object to the array
-        $formDataArray[] = $formData;
+        // Add the new CartItem object to the array
+        $cartItems[] = $cartItem;
 
         // Save the array in the session
-        $_SESSION["formDataArray"] = $formDataArray;
+        $_SESSION["cartItems"] = $cartItems;
 
-        // Display the form data
-        displayFormData($formDataArray);
+        // Display the cart items
+        displayCartItems($cartItems);
     } else {
-        // Handle the case when the form is not submitted
-        echo 'Form not submitted.';
+        // Handle the case when the cart data is not submitted
+        echo 'Cart data not submitted.';
     }
     ?>
+
 </body>
 </html>
 
