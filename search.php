@@ -1,3 +1,39 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "login";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input from the form
+    $inputName = $_POST["name"];
+    $inputPassword = $_POST["password"];
+
+    // SQL query to search for data
+    $sql = "SELECT * FROM login_table WHERE Name = '$inputName' AND password = '$inputPassword'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Data found, you can process or display the results here
+        while ($row = $result->fetch_assoc()) {
+            echo "Name: " . $row["Name"]. " - Password: " . $row["password"]. "<br>";
+        }
+    } else {
+        echo "No data found for the provided credentials.";
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,14 +99,18 @@
               <div class="col-md-6">
                 <div class="card text-white bg-dark">
                   <div class="card-body">
-                    <h2 class="text-center">Delete</h2>
+                    <h2 class="text-center">Sign In/Out</h2>
                     <div id="signInForm">
-                      <form action="" method="POST">
+                      <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <div class="form-group">
                           <label for="username">Username:</label>
-                          <input type="text" class="form-control" id="username" name="username" required>
+                          <input type="text" class="form-control" id="username" name="name" required>
                         </div>
-                        <button type="delete" class="btn btn-primary" style="margin-top: 3%;" name="delete_btn">delete</button>
+                        <div class="form-group">
+                          <label for="password">Password:</label>
+                          <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 3%;">Search</button>
                       </form>
                     </div>
                   </div>
@@ -92,42 +132,3 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </body>
 </html>
-
-
-<?php
-    if(isset($_POST['submit'])) {
-        // Sanitize user input
-        $name = htmlspecialchars($_POST['name']);
-        // Connect to the database
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "login";
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        // Prepare and execute the SQL query
-        $sql = "SELECT * FROM users WHERE name LIKE '%$name%'";
-        $result = $conn->query($sql);
-// Display the matching records
-if ($result->num_rows > 0) {
-    echo "<table >";
-    echo "<tr><th>Name</th>
-    <th>Email</th>
-    <th>Password</th>
-    <th>Phone_no</th>
-    </tr>";
-    while ($row = $result->fetch_assoc()) {
-      echo "<tr><td>".$row['Name']."</td>
-      <td>".$row['Email']."</td><td>".$row['Password']."</td><td>".$row['Phone_no']."</td>
-      </tr>";
-    }
-    echo "</table>";
-  } else {
-    echo "No matching records found.";
-  } // Close the database connection
-        $conn->close();
-    }
-?>
